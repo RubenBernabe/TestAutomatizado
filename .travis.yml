@@ -9,6 +9,7 @@ addons:
     packages:
       - chromium-chromedriver
 before_script:  
+  - ln -s /usr/lib/chromium-browser/chromedriver ~/bin/chromedriver
   - 'bundle install'
 
 script: 
