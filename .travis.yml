@@ -23,7 +23,7 @@ script:
 - 'bundle exec cucumber'
 - cd ..
 - cd youtube_test
-- 'bundle exec cucumber'
+- 'bundle exec cucumber' 
 
 branches:
   only:
