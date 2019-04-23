@@ -10,6 +10,7 @@ addons:
       - chromium-chromedriver
 before_script:  
   - ln -s /usr/lib/chromium-browser/chromedriver ~/bin/chromedriver
+  - export PATH="$HOME/bin:$PATH"
   - 'bundle install'
 
 script: 
