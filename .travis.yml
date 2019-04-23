@@ -8,6 +8,7 @@ addons:
    apt:
     packages:
       - chromium-chromedriver
+    chrome: stable
 before_script:  
   #- ln -s /usr/lib/chromium-browser/chromedriver ~/bin/chromedriver
   #- export PATH="$HOME/bin:$PATH"
