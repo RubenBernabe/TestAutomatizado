@@ -1,0 +1,10 @@
+Instalado (gem install)
+	cucumber
+	selenium-webdriver
+	rspec-rails
+	geckodriver https://github.com/mozilla/geckodriver/releases
+
+Añadido
+	ruta de Firefox a variables de entorno del sistema (reiniciar después)
+	geckodriver.exe añadir a alguna ruta pública de las variables ej /ruby/bin
+
