@@ -12,7 +12,7 @@ before_script:
   #- ln -s /usr/lib/chromium-browser/chromedriver ~/bin/chromedriver
   #- export PATH="$HOME/bin:$PATH"
   - export PATH=$PATH:/usr/lib/chromium-browser/
-  - google-chrome-stable --no-sandbox --headless --remote-debugging-port=9222 &
+  - google-chrome-stable --no-sandbox  &
   - 'bundle install'
 
 script: 
