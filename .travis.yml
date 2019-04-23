@@ -6,17 +6,14 @@ rvm:
   - 2.5.3
 addons:
   chrome: stable
+   apt:
+    packages:
+      - chromium-chromedriver
 
 before_script:  
-  - wget -N https://chromedriver.storage.googleapis.com/73.0.3683.68/chromedriver_win32.zip -P ~/
-  - unzip ~/chromedriver_win32.zip -d ~/
-  - rm ~/chromedriver_win32.zip
-  - sudo mv -f ~/chromedriver_win32 /usr/local/share/
-  - sudo chmod +x /usr/local/share/chromedriver_win32
-  - sudo ln -s /usr/local/share/chromedriver_win32 /usr/local/bin/chromedriver_win32
-  #- ln -s /usr/lib/chromium-browser/chromedriver ~/bin/chromedriver
-  #- export PATH="$HOME/bin:$PATH"
-  #- google-chrome-stable --no-sandbox --headless --remote-debugging-port=9222 &
+  - ln -s /usr/lib/chromium-browser/chromedriver ~/bin/chromedriver
+  - export PATH="$HOME/bin:$PATH"
+  - google-chrome-stable --no-sandbox --headless --remote-debugging-port=9222 &
   - 'bundle install'
 
 script: 
