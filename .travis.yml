@@ -21,9 +21,9 @@ before_script:
 script: 
 - cd renfe_test
 - 'bundle exec cucumber'
-- cd ..
-- cd youtube_test
-- 'bundle exec cucumber' 
+#- cd ..
+#- cd youtube_test
+#- 'bundle exec cucumber' 
 
 branches:
   only:
