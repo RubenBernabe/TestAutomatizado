@@ -10,7 +10,7 @@ end
 
 Then("videos of Cucumber are returned") do
   puts page.inspect
-  page.should have_content 'Es el tester aquella persona'
+  page.should have_content 'It is the tester that person'
   sleep 2
 end
 
