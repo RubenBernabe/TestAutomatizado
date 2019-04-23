@@ -8,7 +8,7 @@ addons:
 before_script: 
 - wget https://chromedriver.storage.googleapis.com/73.0.3683.68/chromedriver_win32.zip
 
-- unzip chromedriver_win32.zip -d /home/travis/virtualenv/python2.7.12/bin/
+- unzip chromedriver_win32.zip -d /home/travis/
 
 - export CHROME_BIN=chromium-browser
 - 'bundle install'
