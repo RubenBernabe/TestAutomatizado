@@ -5,18 +5,15 @@ cache: bundler
 rvm:
   - 2.5.3
 
-
-  
-addons:
-  apt:
-    packages:
-      - chromium-chromedriver
-
-before_script: 
-- sudo apt-get update
-- sudo apt-get install chromium-chromedriver
-- "export PATH=$PATH:/usr/lib/chromium-browser/"
-- "export DISPLAY=:99.0"
+addons: # get google-chrome-stable
+  chrome: stable
+before_script:  # Install ChromeDriver (64bits; replace 64 with 32 for 32bits).
+  - wget -N https://chromedriver.storage.googleapis.com/73.0.3683.68/chromedriver_linux64.zip -P ~/
+  - unzip ~/chromedriver_linux64.zip -d ~/
+  - rm ~/chromedriver_linux64.zip
+  - sudo mv -f ~/chromedriver /usr/local/share/
+  - sudo chmod +x /usr/local/share/chromedriver
+  - sudo ln -s /usr/local/share/chromedriver /usr/local/bin/chromedriver
 - 'bundle install'
 
 script: 
