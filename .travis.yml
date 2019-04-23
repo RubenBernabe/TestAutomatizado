@@ -9,9 +9,9 @@ addons:
     packages:
       - chromium-chromedriver
 before_script:  
-  - ln -s /usr/lib/chromium-browser/chromedriver ~/bin/chromedriver
-  - export PATH="$HOME/bin:$PATH"
-  #- export PATH=$PATH:/usr/lib/chromium-browser/
+  #- ln -s /usr/lib/chromium-browser/chromedriver ~/bin/chromedriver
+  #- export PATH="$HOME/bin:$PATH"
+  - export PATH=$PATH:/usr/lib/chromium-browser/
   - google-chrome-stable --no-sandbox  &
   - 'bundle install'
 
