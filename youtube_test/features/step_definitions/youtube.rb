@@ -1,10 +1,11 @@
-Given(/^YouTube home page$/) do
+﻿Given(/^YouTube home page$/) do
   visit('http://www.youtube.com')
 end
 
 When(/^search for "(.*?)"$/) do |search_term|
   fill_in 'search_query', :with => search_term
   click_on 'search-icon-legacy'
+  sleep 2
 end
 
 Then("videos of Cucumber are returned") do
@@ -18,7 +19,7 @@ Given("I am on the cucumber testing search on YouTube") do
 end
 
 When("I click on the first video") do
-  find("a[href='/watch?v=jk4wKUHUZAU']", match: :first).click
+  find(:xpath, "//a[@href='/watch?v=jk4wKUHUZAU']", match: :first).click
   sleep 1
 end
 
