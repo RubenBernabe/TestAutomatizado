@@ -5,6 +5,7 @@ language: ruby
 rvm:
   - 2.5.3
 addons:
+  chrome: stable
   apt:
     packages:
       - chromium-chromedriver
