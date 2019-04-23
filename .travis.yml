@@ -1,0 +1,14 @@
+language: ruby
+cache: bundler
+
+rvm:
+  - 1.9.3
+
+before_script: 'bundle install'
+script: 
+- cd renfe_test
+- 'bundle exec cucumber'
+
+branches:
+  only:
+    - master
