@@ -5,11 +5,10 @@ cache: bundler
 rvm:
   - 2.5.3
 addons:
-  chrome: stable
+
    apt:
     packages:
       - chromium-chromedriver
-
 before_script:  
   - ln -s /usr/lib/chromium-browser/chromedriver ~/bin/chromedriver
   - export PATH="$HOME/bin:$PATH"
