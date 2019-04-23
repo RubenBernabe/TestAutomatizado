@@ -43,7 +43,7 @@ Then(/^I should see English words$/) do
 end
 
 When("I search Turism Train") do
-   find(:xpath, "//a[@href='/trenesturisticos/index.html']", match: :first).click
+   find(:xpath, "//a[@href='/trenesturisticos/index.html']").click
    sleep (1)
 end
 
