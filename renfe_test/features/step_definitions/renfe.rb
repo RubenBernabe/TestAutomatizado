@@ -34,7 +34,8 @@ Then(/^I should see buy page$/) do
 end
 
 When("I translate the page to English") do
-  find(:xpath, "//a[@href='/EN/viajeros/index.html']").click
+  ##find(:xpath, "//a[@href='/EN/viajeros/index.html']").click
+  visit 'http://www.renfe.com/EN/viajeros/index.html'
   sleep (1)
 end
 
