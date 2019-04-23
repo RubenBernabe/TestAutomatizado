@@ -10,7 +10,7 @@ end
 
 Then("videos of Cucumber are returned") do
   puts page.inspect
-  page.should have_content 'It is the tester that person'
+  page.should have_content 'Es el tester aquella persona'
   sleep 2
 end
 
@@ -19,7 +19,7 @@ Given("I am on the cucumber testing search on YouTube") do
 end
 
 When("I click on the first video") do
-  find(:xpath, "//a[@href='/watch?v=jk4wKUHUZAU']", match: :first).click
+  find("a[href='/watch?v=jk4wKUHUZAU']", match: :first).click
   sleep 1
 end
 
