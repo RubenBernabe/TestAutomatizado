@@ -17,7 +17,7 @@ before_script:  # Install ChromeDriver (64bits; replace 64 with 32 for 32bits).
   - 'bundle install'
 
 script: 
-- cd renfe_test
+- cd youtube_test
 - 'bundle exec cucumber'
 
 branches:
