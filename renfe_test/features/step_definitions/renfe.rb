@@ -34,7 +34,7 @@ Then(/^I should see buy page$/) do
 end
 
 When("I translate the page to English") do
-  find(:xpath, "//a[@href='/EN/viajeros/index.html']", match: :first).click
+  find(:xpath, "//a[@href='/EN/viajeros/index.html']").click
   sleep (1)
 end
 
@@ -43,7 +43,7 @@ Then(/^I should see English words$/) do
 end
 
 When("I search Turism Train") do
-   find(:xpath, "//a[@href='/trenesturisticos/index.html']").click
+   find(:xpath, "//a[@href='/trenesturisticos/index.html']", match: :first).click
    sleep (1)
 end
 
