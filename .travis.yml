@@ -5,13 +5,12 @@ cache: bundler
 rvm:
   - 2.5.3
 addons:
-    chrome: stable
+  apt:
+    packages:
+      - chromium-chromedrive
 before_script:  
-  - wget https://chromedriver.storage.googleapis.com/73.0.3683.68/chromedriver_win32.zip
-  - unzip chromedriver_win32.zip -d ~/
-  - export PATH="$HOME/"
-  #- ln -s /usr/lib/chromium-browser/chromedriver ~/bin/chromedriver
-  #- export PATH="$HOME/bin:$PATH"
+  - ln -s /usr/lib/chromium-browser/chromedriver ~/bin/chromedriver
+  - export PATH="$HOME/bin:$PATH"
   #- export PATH=$PATH:/usr/lib/chromium-browser/
   - google-chrome-stable --no-sandbox  &
   - 'bundle install'
