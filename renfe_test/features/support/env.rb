@@ -1,5 +1,15 @@
 require 'capybara/cucumber' 
 require 'selenium-webdriver'
 require 'capybara/rspec'
-Selenium::WebDriver::Firefox::Binary.path='C:\Program Files\Mozilla Firefox\firefox.exe'
+
+Capybara.default_driver = :selenium_chrome
+Capybara.ignore_hidden_elements = false
+
+Capybara.default_selector = :css
+
+
+
+
+
+
 

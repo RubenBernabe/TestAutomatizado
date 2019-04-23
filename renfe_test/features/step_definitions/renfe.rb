@@ -1,4 +1,4 @@
-Capybara.default_driver=:selenium
+
 
 Given(/^I am on Renfe home page$/) do
   visit 'http://www.renfe.com'
