@@ -3,13 +3,14 @@ cache: bundler
 
 rvm:
   - 2.5.3
-
+addons:
+  apt:
+    sources:
+      - google-chrome
+    packages:
+      - google-chrome-stable
 before_script: 
-- wget https://chromedriver.storage.googleapis.com/73.0.3683.68/chromedriver_win32.zip
 
-- unzip chromedriver_win32.zip -d /home/travis/build/RubenBernabe/TestAutomatizado
-
-- export CHROME_BIN=chromium-browser
 - 'bundle install'
 
 script: 
